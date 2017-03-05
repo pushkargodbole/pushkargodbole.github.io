@@ -1,0 +1,30 @@
+Lecture 1 (Sam Altman)
+* Idea -> Product -> Team -> Execution
+* Startup success = Idea*Product*Team*Execution*Luck    0 <= Luck <= 10000
+Idea
+* Execution at least 10 times as important as Idea
+* But Idea is still important. All great startups started with a great idea. Startups that became successful after pivoting are exceptions, not the norm.
+* Idea: How excited you are about it, Size & growth of market, Strategy of the company, Defensibility of the business
+* Startup must feel like a mission. Good startups take a decade to create.
+* Good Startup = Good Idea that sounds like a bad one
+* Idea need not sound big and important at the beginning but should focus on and completely capture a small segment of the market, with a potential to capture the entire market in future.
+* Small and rapidly growing market customers are desperate for solutions and they will put up with an imperfect but rapidly improving product.
+* You can not create a market that doesnt want to exist. You have to modify your startup accordingly.
+* Why now? Why not earlier, why not later?
+* If it takes more than a sentence to explain your idea, its usually too complicated to work.
+* Begin with the demand and create the appropriate supply. 
+Product
+* Easier to build something that small no. of users LOVE rather than something that a large no. of users LIKE. LOVE: Growth from word of mouth.
+* Tighten product feedback loops.
+* Focus on metrics that matter. Be honest about growth.
+Why startup?
+BAD
+* Extreme stress: Always on call and always working. Shit tends to hit the fan very easily.
+* Responsibility: Your team has bet some of the best years of their life on you.
+* Fundraising and unwanted media attention.
+* Can not leave as a founder without having repurcussions on you and your team.
+* Committed 10 years if its going well,  years if not (3 years to realize its not going well and 2 years at the aquihired company, awful)
+Best Reason:
+* You can't not do it
+  - Passion: You need to do it
+  - Aptitude: The world needs you to do it

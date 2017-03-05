@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <link rel="shortcut icon" href="PG.ico">
+	<meta http-equiv="Content-Type" content="text/html;  charset=iso-8859-1" />
+	<meta name="Pushkar Godbole's homepage"/>
+	<meta name="pushkar godbole iitb iit"/>
+ <link rel="stylesheet" type="text/css" href="style.css" media="all" />  
+<style>
+			.tabs li {
+				list-style:none;
+				display:inline;
+				text-align:center;
+			}
+
+			.tabs a {
+				padding:5px 10px;
+				margin:4px 2px;
+				display:inline-block;
+				background:#cfcfcf;
+				color:#282d2d;
+				text-decoration:none;
+			}
+
+			.tabs a.active {
+				background:#282d2d;
+				color:#ffffff;
+				text-decoration:none;
+			}
+			
+			.tabs a:hover {
+				text-decoration:none;
+				background:#282d2d;
+                color:#ffffff;
+				border-bottom:0px;
+			}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+			// Wait until the DOM has loaded before querying the document
+			$(document).ready(function(){
+				$('ul.tabs').each(function(){
+					// For each set of tabs, we want to keep track of
+					// which tab is active and it's associated content
+					var $active, $content, $links = $(this).find('a');
+
+					// If the location.hash matches one of the links, use that as the active tab.
+					// If no match is found, use the first link as the initial active tab.
+					$active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+					$active.addClass('active');
+					$content = $($active.attr('href'));
+
+					// Hide the remaining content
+					$links.not($active).each(function () {
+						$($(this).attr('href')).hide();
+					});
+
+					// Bind the click event handler
+					$(this).on('click', 'a', function(e){
+						// Make the old tab inactive.
+						$active.removeClass('active');
+						$content.hide();
+
+						// Update the variables with the new link and content
+						$active = $(this);
+						$content = $($(this).attr('href'));
+
+						// Make the tab active.
+						$active.addClass('active');
+						$content.show();
+
+						// Prevent the anchor's default click action
+						e.preventDefault();
+					});
+				});
+			});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46740465-1', 'iitb.ac.in');
+  ga('send', 'pageview');
+
+</script>
+<title>Pushkar Godbole</title>
+</head>
+
+<body>
+   <div id="container">
+       
+        <div id="header">
+            <h1>Pushkar <span>Godbol&eacute;</span></h1>
+            <h4><i>Wants to know something about everything and everything about something.</i></h4>
+            </div>
+      <div id="wrapper">
+
+        <div id="navigation">
+           <ul id>
+                <li><a href="index.html" onFocus="if(this.blur)this.blur()">Home</a></li>
+                <li><a href="vita.html" onFocus="if(this.blur)this.blur()">Vita</a></li>
+                <li class="current_page_item"><a href="projects.html" onFocus="if(this.blur)this.blur()">Projects</a></li>
+                <li><a href="buzz.html" onFocus="if(this.blur)this.blur()">Buzz</a></li>
+                <li><a href="geekycauldron.html" onFocus="if(this.blur)this.blur()">Geeky Cauldron</a></li>
+                <li><a href="contact.html" onFocus="if(this.blur)this.blur()">Contact</a></li>
+           </ul>
+        </div>
+            <ul style="margin-top: 70px;" class="tabs">
+              <li><a href='#tab1'>Aircraft routing and scheduling for Mumbai International Airport</a></li>
+              <li><a href='#tab2'>Parallel framework for PySPH</a></li>
+              <li><a href='#tab3'>Multi-track Railway scheduling using MILP</a></li>
+              <li><a href='#tab4'>Data-management system for Pratham</a></li>
+              <li><a href='#tab5'>Pratham Ground station</a></li>
+              <li><a href='#tab6'>Multi-target Particle Swarm Optimization</a></li>
+              <li><a href='#tab7'>academics@IITB on SMS</a></li>
+              <li><a href='#tab8'>Design Optimization</a></li>
+              <li><a href='#tab9'>Remote I/O interface for FlightGear</a></li>
+              <li><a href='#tab10'>QuantCapital Pvt. Ltd.</a></li>
+            </ul>
+		<div id="tab1">
+		<div class="contentTitle"><h4>Aircraft routing and scheduling for Mumbai International Airport</h4></div>
+        <h5>Master's thesis <i>( <a href="http://www.cse.iitb.ac.in/~ranade/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Ranade</a>, <a href="http://www.aero.iitb.ac.in/~rkpant/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Pant</a>)</i></h5>
+        <div class="contentText" align="justify">
+          <p>
+              <p>Due to steep increase in air-transportation demand, heavy air traffic has become very common at many airports across the world while airport facilities and operation methodologies broadly remain constant. The throughput of an airport in terms of the the number of aircraft handled, depends on the airport&apos;s infrastructural capacity and operational efficiency. Due to heavy increase in air transportation, many of the airports today work at the brink of their infrastructural capacity thus making efficient operations a significant determining factor. In this project, we are working in collaboration with the Mumbai International Airport Limited (MIAL) to develop a decision support tool for Air Traffic Controllers (ATCs) to assist them in making better decisions for optimal routing and scheduling of aircraft through the network of runways and taxi-ways.</p>
+              <p>Optimal aircraft scheduling is a well known NP-Hard problem and hence heuristics are often used to generate schedules within realistic run-times. These heuristics are designed to run fast, but often do not promise any guarantee about the <i>solution quality</i>. A metric to evaluate and benchmark various scheduling algorithms for their <i>nearness to optimality</i> is thus necessary. For the first part of the project, I have developed an exhaustive search algorithm that finds a <i>provably</i> best solution to a snapshot aircraft scheduling problem. The airport map (interpreted as a graph) and details of aircraft within the scheduling horizon are taken as inputs and the globally optimal schedule that minimizes the total taxi and waiting time for all aircraft is generated. This has been done by determining all simple-paths for the aircraft and identifying the global optimum via an MILP (using CPLEX) run on every flight-path combination.</p>
+              <p>From this work we observed that due to the limited size of the airport, merely arranging the flight-path allocations in increasing order of path lengths leads to the global optimum being reached at a very early stage of the run. For the second stage of the project, we have developed a Branch &amp; Bound algorithm to cut down on the run-time of the previous approach. With this approach, we are able to identify the lower and upper bounds for schedules of every flight-path combination. The overlaps are modelled as disjunctive constraints and the BnB tree for every such combination is thus grown and pruned to finally identify the optimal schedule for that particular combination. The final optimal schedule is a minimum over all such flight-path combinations and is therefore a global optimum. Dramatic improvements over the previous brute-force approach have been observed using this algorithm. The two test problems from our AIAA paper now take merely 14 and 15 seconds repectively. The final objective of the project is to come up with a method to find a <i>testable</i> optimal schedule for aircraft on an airport on the fly, subject to variability of parameters in real-time.</p>
+          <p>Here is my Stage 1 <a href="reports/DDP1_report.pdf" target="_blank" onFocus="if(this.blur)this.blur()">report</a>, the <a href="reports/DDP1_prez.pdf" target="_blank" onFocus="if(this.blur)this.blur()">slides</a> from my presentation, the <a href="https://bitbucket.org/pgodbole/a-c-milp-global-search" target="_blank" onFocus="if(this.blur)this.blur()">code</a> and the <a href="pubs/MILP_AIAA2014_ExtendedAbstract.pdf" target="_blank" onFocus="if(this.blur)this.blur()">extended abstract</a> accepted for AIAA Aviation 2014 to be held at Atlanta, Georgia, USA.
+          </p>
+          </p>
+        </div>
+		</div>        
+        <div id="tab2">
+        <div class="contentTitle"><h4>Parallel framework for PySPH</h4></div>
+        <h5>Bachelor's thesis <i>(<a href="http://www.aero.iitb.ac.in/~prabhu/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Ramachandran</a>, <a href="http://www.aero.iitb.ac.in/~avijit/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Chatterjee</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <h5><i>Publications:</i></h5>
+              <p>P. Godbole, K. Puri, P. Ramachandran, "Load-balancing strategies for parallel Smooth Particle  Hydrodynamics"<br>
+              <a href="https://wiki.manchester.ac.uk/spheric/images/SPHERIC_newsletter_issue-16.pdf" target="_blank" onFocus="if(this.blur)this.blur()">8<sup>th</sup> International SPHERIC workshop 2013</a> - Trondheim, Norway (Presenter)<br>
+              (<a href="pubs/SPH_LB_Spheric2013_Trondheim_prez.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Presentation</a>), (<a href="pubs/SPH_LB_Spheric2013_Trondheim.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Paper</a>)</p>
+              <p>K. Puri, P. Godbole, P. Ramachandran, "Dynamic Load-balancing for particle methods"<br>
+              <a href="http://congress.cimne.com/particles2013/proceedings/" target="_blank" onFocus="if(this.blur)this.blur()">PARTICLES 2013</a> - Stuttgart, Germany<br>
+              (<a href="pubs/SPH_LB_Particles2013_Stuttgart_prez.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Presentation</a>)</p>
+              <p>K. Puri, P. Ramachandran, P. Pandey, C. Kaushik, P. Godbole, "PySPH: A Python framework for Smooth Particle Hydrodynamics"<br>
+              <a href="https://wiki.manchester.ac.uk/spheric/images/SPHERIC_newsletter_issue-16.pdf" target="_blank" onFocus="if(this.blur)this.blur()">8<sup>th</sup> International SPHERIC workshop 2013</a> - Trondheim, Norway<br>
+              (<a href="pubs/PySPH_Spheric2013_Trondheim.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Paper</a>)</p>
+              <p><a href="http://pythonhosted.org/PySPH/intro/getting_started.html" target="_blank" onFocus="if(this.blur)this.blur()">PySPH</a> is an open source framework for Smoothed Particle Hydrodynamics (SPH) simulations being developed under Prof. Prabhu Ramachandran, Aerospace Engineering Department, IIT-Bombay over the last 5 years. I was introduced to PySPH in my third year by Prof. Ramachandran. In my fourth year, I carried over this work to my bachelor's thesis, where I worked under the mentorship of Kunal Puri (a PhD student) on developing a new parallel module for PySPH.</p>
+              <p>In the parallel implementation of Lagrangian (coordinates move with the fluid) methods like SPH, the simulation space is geometrically divided into sub-problems across processors which then solve the problem colaterally. But SPH being a particle method, it is impossible to sub-divide the simulation into mutually independent sub-problems and hence boundary data needs to be exchanged across neighboring processors at every iteration for the simulation to give accurate results. Thus efficient load-balancing (appropriate distribution of data across processors that ensures equal work load and minimal data-exchange) and message passing becomes very critical.</p>
+              <p>The final opbective was to implement an application agnostic parallelizer for PySPH. We used <a href="http://www.cs.sandia.gov/zoltan/Zoltan.html" target="_blank" onFocus="if(this.blur)this.blur()">Zoltan</a> for the various geometric and graph based load-balancing algorithms. I contributed to the integration of Zoltan with PySPH and evaluation of all the load-balancing methods. I presented this work at the SPHERIC 2013 conference in Trohdheim, Norway. An extension of the same to general particle methods was then presented at PARTICLES 2013 conference in Stuttgart, Germany by Kunal. I also proposed a new strategy for neighbor particle search based on modified symetric-interactions which achieved a speed-up of 25%. The parallelizer we developed achieved a near-linear scale-up for upto 128 processors with speeds comparable to other established packages.</p>
+          <p>Here are the <a href="reports/BTP1_report.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Stage 1</a> and <a href="reports/BTP2_report.pdf" target="_blank" onFocus="if(this.blur)this.blur()">Stage 2</a> reports,  the <a href="reports/BTP2_prez.pdf" target="_blank" onFocus="if(this.blur)this.blur()">slides</a> of the presentation and the current <a href="https://bitbucket.org/pysph/pysph" target="_blank" onFocus="if(this.blur)this.blur()">code</a>.</p>
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab3">
+        <div class="contentTitle"><h4>Multi-track Railway scheduling using MILP</h4></div>
+        <h5>Summer Project <i>(<a href="http://www.cse.iitb.ac.in/~ranade/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Ranade</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+            <p>On prof. Ranade's suggestion, I participated in the INFORMS RAS 2012 competition and worked on it's problem statement as a summer project. Although I did not win the contest, I was able to deliver a working railway scheduler with significant realism. This project whetted my interest in Linear programming and led me to continue working under Prof. Ranade for my master's thesis.</p>
+            <p>The railway scheduling algorithm takes as input the multi-track railway territory map (interpreted as a graph) and the parameters of all trains and gives as output the nodal-time-stamps for every train such that the given cost function is minimized. It takes into account various realistic constraints and conditions such as terminal want times, intermediate arrival times, on-track waiting times, unpreferred track usages, priority allocations, maintainance windows, train types, lengths, speeds and weights while evaluating the cost function. In short, it works in two steps. In the first step, trains are greedily allocated paths based on the train priority, starting time and other cost considerations. In the second step, an optimal schedule to minimize the total cost is determined via an MILP model (using CPLEX). To improve the schedule, some path allocations are randomly swapped and the cost function re-evaluated to check improvement over the base schedule. The entire algorithm is nested inside a loop which splits the trains into batches and schedules one batch at a time to ensure scalability w.r.t. the number of trains as the problem size increases. </p>
+          <p>Here is the <a href="reports/2012_RAS_PS.pdf" target="_blank" onFocus="if(this.blur)this.blur()">problem statement</a>, the <a href="reports/RAS_report.pdf" target="_blank" onFocus="if(this.blur)this.blur()">report</a> and the corresponding <a href="https://bitbucket.org/pgodbole/rail_scheduling" target="_blank" onFocus="if(this.blur)this.blur()">codes</a>.</p>
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab4">
+        <div class="contentTitle"><h4>Data-management system for Pratham</h4></div>
+        <h5>Summer Internship at University of Paris - Diderot, Paris, France (<a href="http://www.ipgp.fr/index.php?langue=1" target="_blank" onFocus="if(this.blur)this.blur()">IPGP</a>) <i>(Prof. Philippe Lognonne, Pierdavide co&iuml;sson, Olivier Robert)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>I have been a part of the Pratham (IIT-Bombay student satellite team) since Aug 2010. I was selected for a summer internship at IPGP from amongst the team, through Pratham's collaboration with the University of Paris Diderot; to develop the conceptual design of the data management system for Pratham's downlink data.</p>
+              <p>During the internship, I developed the detailed design of the data management system for acquisition, handling, processing and storage of Pratham's downlink data at the central Ground Station (IIT-Bombay) and other sister ground stations (at the participating universities) under the mentorship of Pierdavide Co&iuml;sson and Olivier Robert. Later, I also prototyped and tested this design for critical cases on a hub and spoke toy configuration.</p>
+              <p>This work was incorporated into Pratham's paper titled <a href="pubs/Pratham_DataManagement_IAC2011_Capetown.pdf" target="_blank" onFocus="if(this.blur)this.blur()">"Design of Data Acquisition, Collection, Processing and Archiving System for Pratham"</a> published at the <a href="http://www.iafastro.net/iac/paper/id/11503/summary/" target="_blank" onFocus="if(this.blur)this.blur()">62<sup>nd</sup> International Astronautical Congress 2012</a>, Cape Town, South Africa.</p>
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab5">
+        <div class="contentTitle"><h4>Pratham Ground station</h4></div>
+        <h5><a href="http://www.aero.iitb.ac.in/pratham/" target="_blank" onFocus="if(this.blur)this.blur()">Pratham (IIT-Bombay student satellite)</a></h5>
+        <div class="contentText"  align="justify">
+          <p>
+            <p>I joined the Pratham team in August 2010, in my sophomore year, as member of the Communications sub-system. Pratham's payload is to measure the TEC (Total Electron Count) of the atmosphere over India. We have collaborated with 11 other universities in India and with University of Paris - Diderot (<a href="http://www.ipgp.fr/index.php?langue=1" target="_blank" onFocus="if(this.blur)this.blur()">IPGP</a>), in Paris to set up IIT-Bombay's sister ground-stations in their own campuses. With the help of these ground-stations, we endeavor to generate an electron-density map in regions with multiple ground-station visibility.</p>
+            <p>In the Communications sub-system, I was responsible for developing the downlink data-decoding and data-management system for Pratham. As part of the ground-station team, I contributed to the setup and automation of the IIT-Bombay ground-station. With the ground-station, we tracked and decoded over 20 satellites including the International Space Station. I also got to visit other universities to assist them in replicating the IIT-Bombay ground-station. The data-decoding system was developed here at IIT-Bombay while the design of the data-management system was done during my internship at IPGP.</p>
+          <p>Additionally, I suggested a slight redesign and reprogramming of the beacon circuit on-board Pratham, which reduced the beacon power consumption by 50%. The solution is quite simple and worth mentioning. In short, it goes as follows:<br>
+          The beacon signal emitted by Pratham is OOK (On-Off Keying) encoded and has a duty-cycle of 50% to maintain the power budget. The signal generation is achieved using an oscillator on the beacon circuit. Initially the beacon message, encoded in morse-code was input to the enable pin of the oscillator while the power pin was always on. Thus the oscillator consumed some power even when it was not transmitting. And the 50% duty cycle meant that the beacon signal could be transmitted only for 50% of the time, leading to data loss. I suggested that since we were using OOK, we could actually power off the oscillator entirely for the part of the message when '0' was being transmitted and power it on while transmitting a '1', essentially changing the input of the beacon message from enable pin to power pin of the oscillator. The response time of the oscillator was found to be short enough for this hack to work well. The message was then appropriately modified so that the on-time (number of spaces) was approximately equal to the off-time (number of 'dits' + 3 x 'das') in the morse code being transmitted, ensuring the 50% duty cycle. So we were able to achieve constant transmission of beacon signal while satisfying our power budget.</p>
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab6">
+        <div class="contentTitle"><h4>Multi-target Particle Swarm Optimization</h4></div>
+        <h5>Supervised Learning Project <i>(<a href="http://www.aero.iitb.ac.in/~ashokj/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Joshi</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>Particle Swarm Optimization (PSO) is a nature-inspired heuristic method to optimize the objective function via a population of candidate solutions, dubbed <b>boids</b>, exploring the solution-space based on simple mathematical rules for their position, velocity and cost function. The algorithm is inspired from the behaviour of birds in search of food. Similar to the birds, the boids have both exploratory and swarming tendencies, appropriately balancing which leads to convergence to an optimum in the solution-space.</p>
+              <p>For this project I implemented a PSO algorithm to work on solution spaces with multiple optima and evaluated and analysed the effects of the driving parameters (acceleration coefficients) on speed and efficiency of the PSO. We made critical observations and quantified the performance of the algorithm based on values of these coefficients. After qualitatively reasoning the observations, we proposed two approaches to improve the multi-target PSO.</p>
+              <p>Here is the <a href="reports/SLP_PSO_report.pdf" target="_blank" onFocus="if(this.blur)this.blur()">report</a> and the MATLAB <a href="https://bitbucket.org/pgodbole/multi-target-pso" target="_blank" onFocus="if(this.blur)this.blur()">codes</a> for the same.
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab7">
+        <div class="contentTitle"><h4>academics@IITB on SMS</h4></div>
+        <h5>Software Development course project <i>(<a href="http://www.aero.iitb.ac.in/~prabhu/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Ramachandran</a>, <a href="http://www.ee.iitb.ac.in/wiki/faculty/belur" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Belur</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>For the project of "Software development for Engineers and scientists" we in a team of four (Avnish, Giri Prashant, Pushkar, Saket), developed an SMS interface for the IIT-Bombay academics website. The interface would require a student to optionally register for the service, enabling him/her to check and recieve updates about their library dues, grades, course material and grading statistics via SMS. The backend was developed in Python while <a href="http://www.txtweb.com/" target="_blank" onFocus="if(this.blur)this.blur()">txtWeb</a> was used for the SMS layer.</p>
+              <p>The app received over 2000 hits within a month and the idea was later officially implemented by the institute's academics website.</p>
+              <p>Here is the <a href="https://github.com/saketkc/iitb-library-sms-interface" target="_blank" onFocus="if(this.blur)this.blur()">code</a> for the same.
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab8">
+        <div class="contentTitle"><h4>Design Optimization</h4></div>
+        <h5>Aircraft design course project <i>(<a href="http://home.comcast.net/~clipper-108/site/?/page/Dr._Scott/&PHPSESSID=072d3a35583508416f8902ef8f273a70" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Eberhardt</a>, <a href="http://www.aero.iitb.ac.in/~rkpant/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Pant</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>For the project of the Aircraft design course, we in a team of 6 developed the conceptual design of a long range twin-aisle civil aircraft targetted at the Indian aviation market of 2020. In this project I was responsible for the sizing and weight minimization of the aircraft subject to all aerodynamic and operational constraints.</p>
+          </p>
+        </div>
+        <h5>Aircraft design lab project <i>(<a href="http://www.aero.iitb.ac.in/~rkpant/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Pant</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>For the project of the Aircraft design lab, we in a team of 6 developed the conceptual design of a Ultra Heavy Lift Hybrid Air Vehicle (UHLHAV) with a payload capacity of 1,200,000 lb. In this project I was responsible for sizing the cargo bay and envelope of the UHLHAV. The cargo bay sizing was solved as a packing problem so as to satisfy the configuration requirements of different types of payloads specified. The envelope was sized later based on the cargo bay design. The weight minimization of the entire UHLHAV was done bottom-up starting from the cargo bay up to the envelope structure.</p>
+          </p>
+        </div>
+        </div>
+        <div id="tab9">
+        <div class="contentTitle"><h4>Remote I/O interface for FlightGear</h4></div>
+        <h5>Supervised Learning Project <i>(<a href="http://www.aero.iitb.ac.in/~prabhu/" target="_blank" onFocus="if(this.blur)this.blur()">Prof. Ramachandran</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p><a href="http://www.flightgear.org/" target="_blank" onFocus="if(this.blur)this.blur()">FlightGear</a> is an open-source flight simulator with a goal to create a sophisticated and open flight simulator framework for use in research or academic environments, pilot training and as an industry engineering tool.</p>
+              <p>FlightGear has an elaborate backend data interface with variety of pre-defined and generic protocols. The objective of this project was to develop a remote Input/Output interface for FlightGear that could be used to track and evaluate the performance of a flier or a control law. I developed a generic UDP socket protocol and a GUI interface to remotely set and get the flight parameters of FlightGear. The GUI was also capable of dynamically plotting various flight parameters in real-time thus enabling the flier to evaluate his performance. The implementation of the interface was done in Python.</p>
+              <p>The project led me to develop a very basic terminal based <a href="https://bitbucket.org/pgodbole/assignments/src/5f2c3e296ae0ac448f7bd38c611d96a9cdd3eb5c/socket_chat/?at=default" target="_blank" onFocus="if(this.blur)this.blur()">ip chat application</a> that allowed me to chat with institute friends even when the internet was down.</p>
+              <p>The codes of the project can be found <a href="https://bitbucket.org/pgodbole/fg-plotter" target="_blank" onFocus="if(this.blur)this.blur()">here</a>.</p>
+          </p>
+        </div>
+        
+        </div>
+        <div id="tab10">
+        <div class="contentTitle"><h4>QuantCapital Pvt. Ltd.</h4></div>
+        <h5>Summer Internship <i>(Rishav Dev, <a href="http://www.quantcapital.co.in/" target="_blank" onFocus="if(this.blur)this.blur()">QantCapital</a>)</i></h5>
+        <div class="contentText"  align="justify">
+          <p>
+              <p>The internship was primarily in the qantitative risk analysis sector. I was given two projects. The first was the implementation and evaluation of an Implied Risk Premium (IRP) model based on the "ERP: Determinants, Estimations and Implications" paper by Ashwath Damodaran. I implemented the model and evaluated its performance on real data via Bloomberg. We observed 20% improved predictability over the standard risk premium models. The IRP model was later used to generate Developed to Emmerging market risk-ratio projections for deciding the investment strategy in Developed vs Emmerging markets.</p>
+              <p>The second project was to develop an automated tool to generate, visualize and analyse the broking performance index of the traders in the firm. The tool was tested on real broking data and was slated to be integrated into the firm's framework soon.</p>
+          </p>
+        </div>
+        
+        </div>
+        </div>
+        <div id="footer"><a href="http://www.opendesigns.org/profile/rizzlestudios/" target="_blank" onFocus="if(this.blur)this.blur()">Open Designs</a>
+        
+      </div> 
+      
+</body>
+
+</html>
+
